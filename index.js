@@ -12,7 +12,7 @@ app.use(express.json());
 
 connecttomongooedb("mongodb://localhost:27017/shorturl")
     .then(() => console.log("Database connected"))
-    .catch((err) => console.error("Mongo connection failed", err));
+    .catch((err) => console.error("Mongo connection failed. ", err));
 
 app.use('/url', urlroute);
 
